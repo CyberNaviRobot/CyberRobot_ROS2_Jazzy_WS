@@ -3,8 +3,8 @@
     <!-- 添加传感器插件 -->
     <gazebo>
         <plugin
-        filename="ignition-gazebo-sensors-system"
-        name="ignition::gazebo::systems::Sensors">
+        filename="gz-sim-sensors-system"
+        name="gz::sim::systems::Sensors">
         <render_engine>ogre2</render_engine>
         </plugin>
     </gazebo>
@@ -35,9 +35,9 @@
             <resolution>0.01</resolution>
             </range>
         </lidar>
-        <alwaysOn>1</alwaysOn>
+        <always_on>true</always_on>
         <visualize>true</visualize> <!-- 激光雷达射线是否可视化 -->
-        <ignition_frame_id>laser_link</ignition_frame_id>
+        <pose relative_to="laser_link"/>
         </sensor>
     </gazebo>
 
